@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b7a45">
+  <meta name="description" content="Zambia Deals Board — discover local deals and help businesses get noticed.">
+  <title>Zambia Deals Board 🇿🇲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">Z</span><div><strong>Zambia Deals Board</strong><small>Find deals. Grow local business.</small></div></div>
+  <div class="actions">
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+    <a class="mini-cta" href="#advertise">📣 Advertise</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">🇿🇲 LOCAL DEALS • LOCAL BUSINESSES</span>
+    <h1>Find a great deal near you.</h1>
+    <p>Discover offers from Zambian businesses — restaurants, salons, barbers, fashion, tech and more.</p>
+    <div class="hero-buttons">
+      <a class="primary" href="#deals">🔎 Find Deals</a>
+      <a class="secondary" href="#advertise">📣 Advertise Your Business</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <span>🚀 LAUNCH OFFER</span>
+    <h3>Get your business noticed</h3>
+    <p>Limited launch promotion for early businesses.</p>
+    <strong>Featured Deal — K30*</strong>
+    <small>*Template offer — change the price whenever you want.</small>
+  </div>
+</section>
+
+<main>
+<section class="trust-strip">
+  <div><b>🔎 Discover</b><span>Find local offers</span></div>
+  <div><b>💬 WhatsApp</b><span>Contact businesses</span></div>
+  <div><b>📣 Promote</b><span>Reach more customers</span></div>
+</section>
+
+<section id="deals" class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">TODAY'S BOARD</span><h2>Popular deals</h2></div>
+    <span id="dealCount" class="count">0 deals</span>
+  </div>
+
+  <div class="filters">
+    <input id="search" type="search" placeholder="Search deals or businesses…">
+    <select id="city"><option value="">All cities</option><option>Lusaka</option><option>Kitwe</option><option>Ndola</option><option>Livingstone</option><option>Kabwe</option></select>
+    <select id="category"><option value="">All categories</option><option>Food</option><option>Beauty</option><option>Barber</option><option>Fashion</option><option>Tech</option></select>
+  </div>
+
+  <div id="dealGrid" class="grid"></div>
+  <div id="empty" class="empty" hidden>No deals match your search.</div>
+</section>
+
+<section class="why section">
+  <div class="section-head"><div><span class="eyebrow">FOR BUSINESS OWNERS</span><h2>Why advertise here?</h2></div></div>
+  <div class="benefits">
+    <article><span>👀</span><h3>Get discovered</h3><p>Put your offer in front of people looking for local businesses.</p></article>
+    <article><span>📱</span><h3>Direct WhatsApp leads</h3><p>Customers can contact you quickly without complicated checkout.</p></article>
+    <article><span>⭐</span><h3>Stand out</h3><p>Featured placement helps your promotion get extra attention.</p></article>
+  </div>
+</section>
+
+<section id="advertise" class="business-section section">
+  <div class="business-card">
+    <div>
+      <span class="eyebrow">GROW YOUR BUSINESS</span>
+      <h2>Advertise your deal on Zambia Deals Board.</h2>
+      <p>Send your details on WhatsApp. No website or technical skills required.</p>
+      <div class="price-grid">
+        <div><b>K20</b><span>Deal Listing</span><small>Basic listing</small><button class="package-btn" data-package="K20 Deal Listing">Choose K20</button></div>
+        <div class="popular"><em>POPULAR</em><b>K50</b><span>Featured Deal</span><small>Extra visibility</small><button class="package-btn" data-package="K50 Featured Deal">Choose K50</button></div>
+        <div><b>K150</b><span>Monthly Premium</span><small>Ongoing promotion</small><button class="package-btn" data-package="K150 Monthly Premium">Choose K150</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h3>📋 List your business</h3>
+    <p class="muted">Fill this in and WhatsApp will prepare your listing request.</p>
+    <form id="listingForm">
+      <input id="businessName" required placeholder="Business name">
+      <input id="businessWhatsApp" required placeholder="Business WhatsApp number">
+      <input id="deal" required placeholder="Your deal (e.g. Haircut K50)">
+      <input id="dealPrice" placeholder="Deal price">
+      <div class="two"><select id="formCity" required><option value="">City</option><option>Lusaka</option><option>Kitwe</option><option>Ndola</option><option>Livingstone</option><option>Kabwe</option></select><select id="formCategory" required><option value="">Category</option><option>Food</option><option>Beauty</option><option>Barber</option><option>Fashion</option><option>Tech</option></select></div>
+      <select id="package"><option>K20 Deal Listing</option><option>K50 Featured Deal</option><option>K150 Monthly Premium</option></select>
+      <textarea id="description" rows="3" placeholder="Short description (optional)"></textarea>
+      <button class="primary full" type="submit">💬 Send Listing Request on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="sales section">
+  <div class="sales-card">
+    <span class="eyebrow">YOUR SALES MESSAGE</span>
+    <h2>Quick pitch for business owners</h2>
+    <p id="pitch">Hi! I run Zambia Deals Board 🇿🇲, a simple platform where customers can discover local business deals. I'm currently helping businesses promote special offers. We have listings from K20, featured deals from K50, and monthly promotion from K150. Would you like me to add your business?</p>
+    <button id="copyPitch" class="secondary">📋 Copy pitch</button>
+  </div>
+</section>
+
+<section class="how section">
+  <span class="eyebrow">SIMPLE PROCESS</span><h2>How it works</h2>
+  <div class="steps"><div><b>1</b><h3>Choose a package</h3><p>Pick K20, K50 or K150.</p></div><div><b>2</b><h3>Send your details</h3><p>WhatsApp your business information.</p></div><div><b>3</b><h3>Get promoted</h3><p>Your deal can be added to the board.</p></div></div>
+</section>
+
+<section class="faq section">
+  <span class="eyebrow">FAQ</span><h2>Questions?</h2>
+  <details><summary>Do customers pay through this website?</summary><p>No. This version sends customers directly to the business on WhatsApp. Payment arrangements can be handled separately.</p></details>
+  <details><summary>Are all businesses verified?</summary><p>No. Listings are promotional/sample listings. Customers should confirm prices, availability and business details before paying.</p></details>
+  <details><summary>Can I change the prices?</summary><p>Yes. The K20/K50/K150 prices are editable in the HTML.</p></details>
+</section>
+</main>
+
+<footer>
+  <strong>Zambia Deals Board 🇿🇲</strong>
+  <p>Discover local deals. Support local business.</p>
+  <small>Demo/launch version. Business information should be checked before purchase.</small>
+</footer>
+
+<a class="sticky-ad" href="#advertise">📣 Advertise Your Business</a>
+
+<script>
+const OWNER_WHATSAPP = "260000000000"; // REPLACE WITH YOUR WHATSAPP NUMBER BEFORE LAUNCH
+
+const deals = [
+ {id:1,name:"FreshCut Barbershop",category:"Barber",city:"Kitwe",icon:"💈",deal:"Haircut + Beard Deal",price:"K50",featured:true,phone:"260000000000"},
+ {id:2,name:"Copper Pot Restaurant",category:"Food",city:"Lusaka",icon:"🍽️",deal:"Lunch Special",price:"K80",featured:true,phone:"260000000000"},
+ {id:3,name:"Fashion Hub",category:"Fashion",city:"Ndola",icon:"👕",deal:"Selected items from K100",price:"K100",featured:false,phone:"260000000000"},
+ {id:4,name:"Beauty Studio",category:"Beauty",city:"Lusaka",icon:"💇",deal:"Braids Special",price:"K150",featured:true,phone:"260000000000"},
+ {id:5,name:"TechZone",category:"Tech",city:"Kitwe",icon:"📱",deal:"Phone accessories offer",price:"From K30",featured:false,phone:"260000000000"},
+ {id:6,name:"Sweet Bites Bakery",category:"Food",city:"Livingstone",icon:"🧁",deal:"Cake & cupcake special",price:"From K60",featured:false,phone:"260000000000"}
+];
+
+const grid=document.getElementById("dealGrid"), empty=document.getElementById("empty"), count=document.getElementById("dealCount");
+const wa=(number,msg)=>`https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
+
+function render(){
+ const q=document.getElementById("search").value.toLowerCase().trim(), city=document.getElementById("city").value, cat=document.getElementById("category").value;
+ const list=deals.filter(d=>(!q || `${d.name} ${d.deal} ${d.category} ${d.city}`.toLowerCase().includes(q)) && (!city||d.city===city) && (!cat||d.category===cat));
+ count.textContent=`${list.length} deal${list.length===1?"":"s"}`;
+ empty.hidden=list.length!==0;
+ grid.innerHTML=list.map(d=>`
+ <article class="deal ${d.featured?"featured":""}">
+   ${d.featured?'<span class="featured-tag">⭐ FEATURED</span>':""}
+   <div class="deal-icon">${d.icon}</div>
+   <div class="deal-body"><div class="deal-top"><span>${d.category} • ${d.city}</span><button class="heart" data-id="${d.id}">♡</button></div>
+   <h3>${d.name}</h3><p>${d.deal}</p><strong>${d.price}</strong>
+   <div class="card-actions"><a class="wa" href="${wa(d.phone,`Hi ${d.name}, I saw your deal on Zambia Deals Board: ${d.deal}.`)}" target="_blank">💬 WhatsApp</a><a class="map" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.name+" "+d.city)}" target="_blank">📍 Map</a></div>
+   <button class="claim" data-name="${d.name}">Claim this business</button>
+   </div>
+ </article>`).join("");
+ document.querySelectorAll(".heart").forEach(b=>b.onclick=()=>{b.classList.toggle("liked");b.textContent=b.classList.contains("liked")?"♥":"♡"});
+ document.querySelectorAll(".claim").forEach(b=>b.onclick=()=>window.open(wa(OWNER_WHATSAPP,`Hi, I'd like to claim/update the listing for ${b.dataset.name} on Zambia Deals Board.`),"_blank"));
+}
+["search","city","category"].forEach(id=>document.getElementById(id).addEventListener("input",render));
+render();
+
+document.querySelectorAll(".package-btn").forEach(btn=>btn.onclick=()=>{
+ document.getElementById("package").value=btn.dataset.package;
+ document.getElementById("advertise").scrollIntoView({behavior:"smooth"});
+});
+
+document.getElementById("listingForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const msg=`Hello! I'd like to list my business on Zambia Deals Board 🇿🇲.\n\nBusiness: ${businessName.value}\nBusiness WhatsApp: ${businessWhatsApp.value}\nDeal: ${deal.value}\nDeal price: ${dealPrice.value||"Not specified"}\nCity: ${formCity.value}\nCategory: ${formCategory.value}\nPackage: ${package.value}\nDescription: ${description.value||"Not specified"}\n\nPlease let me know the next step.`;
+ window.open(wa(OWNER_WHATSAPP,msg),"_blank");
+});
+
+document.getElementById("copyPitch").onclick=async()=>{
+ try{await navigator.clipboard.writeText(document.getElementById("pitch").textContent);document.getElementById("copyPitch").textContent="✅ Copied!"}
+ catch(e){alert("Select and copy the pitch manually.");}
+ setTimeout(()=>document.getElementById("copyPitch").textContent="📋 Copy pitch",1800);
+};
+
+const themeBtn=document.getElementById("themeBtn");
+if(localStorage.getItem("zdb-theme")==="dark"){document.body.classList.add("dark");themeBtn.textContent="☀️"}
+themeBtn.onclick=()=>{document.body.classList.toggle("dark");const dark=document.body.classList.contains("dark");localStorage.setItem("zdb-theme",dark?"dark":"light");themeBtn.textContent=dark?"☀️":"🌙"};
+</script>
+</body>
+</html>
